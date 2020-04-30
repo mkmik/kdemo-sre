@@ -1,10 +1,13 @@
 # Demo
 
 ```
-$ ./deploy-and-test.sh
+$ ./deploy-and-test.sh prod
 ...
-Hello, SRE!
-$ knot8 pull -f app.yaml https://github.com/mkmik/kdemo/releases/download/v0.2.0/app.yaml
-$ ./deploy-and-test.sh
+Hello, Prod!
+$ ./deploy-and-test.sh staging
 ...
-I now say: Hello, SRE!
+Hello, Staging!
+$  curl -sLf >vendor/kdemo/app.yaml https://github.com/mkmik/kdemo/releases/download/v0.2.0/app.yaml
+$ ./deploy-and-test.sh staging
+...
+I now say: Hello, Staging!
